@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="577.0" prefWidth="820.0" style="-fx-background-color: BLACK;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="EditingScreenController">
+    <center>
+        <GridPane alignment="center" hgap="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: ORANGE;"
+                  vgap="30.0">
+
+            <Text style="-fx-text-alignment: center;" text="SELECT AN OPTION" textAlignment="CENTER" translateX="-95.0"
+                  translateY="-150.0" wrappingWidth="300.0" GridPane.columnIndex="2" GridPane.columnSpan="2"
+                  GridPane.rowIndex="1">
+                <font>
+                    <Font name="System Bold" size="30.0"/>
+                </font>
+            </Text>
+
+            <Button alignment="CENTER" onAction="#back" prefHeight="38.0" prefWidth="75.0"
+                    style="-fx-background-color: BLACK; -fx-text-fill: white;" text="BACK" translateX="-220.0"
+                    translateY="-290.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+
+            <ComboBox fx:id="roomsComboBox" onAction="#selectRoom" prefHeight="40.0" prefWidth="160.0"
+                      promptText="ROOMS" style="-fx-border-color: BLACK;" translateX="50.0" translateY="-25"
+                      GridPane.rowIndex="1">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </ComboBox>
+            <ComboBox fx:id="subjectsComboBox" layoutX="268.0" layoutY="482.0" onAction="#selectSubject"
+                      prefHeight="40.0" prefWidth="160.0" promptText="SUBJECTS" style="-fx-border-color: BLACK;"
+                      translateX="-25.0" translateY="-25" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </ComboBox>
+            <ComboBox fx:id="instructorsComboBox" layoutX="268.0" layoutY="482.0" onAction="#selectInstructor"
+                      prefHeight="40.0" prefWidth="160.0" promptText="INSTRUCTORS" style="-fx-border-color: BLACK;"
+                      translateX="50.0" translateY="30.0" GridPane.rowIndex="2">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </ComboBox>
+            <ComboBox fx:id="classesComboBox" layoutX="268.0" layoutY="455.0" onAction="#selectClass" prefHeight="40.0"
+                      prefWidth="160.0" promptText="CLASSES" style="-fx-border-color: BLACK;" translateX="-25.0"
+                      translateY="30.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </ComboBox>
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints maxWidth="118.548095703125" minWidth="9.8790283203125" prefWidth="118.548095703125"/>
+                <ColumnConstraints maxWidth="250.1209716796875" minWidth="141.451904296875"
+                                   prefWidth="141.451904296875"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+
+        </GridPane>
+    </center>
+
+    <left>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </left>
+
+    <right>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+
+        </GridPane>
+    </right>
+</BorderPane>

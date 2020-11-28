@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="577.0" prefWidth="820.0" style="-fx-background-color: BLACK;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ChangeTimingController">
+    <center>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: ORANGE;">
+            <children>
+                <Button layoutX="378.0" layoutY="622.0" mnemonicParsing="false" onAction="#done" prefHeight="44.0"
+                        prefWidth="249.0" style="-fx-background-color: BLACK; -fx-text-fill: white;" text="DONE">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0"
+                        prefWidth="94.0" style="-fx-background-color: BLACK; -fx-text-fill: white;" text="BACK">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Label layoutX="373.0" layoutY="97.0" text="CHANGE TIMINGS">
+                    <font>
+                        <Font name="System Bold" size="30.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="stateLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="584.0"
+                       prefHeight="20.0" prefWidth="428.0" style="-fx-text-alignment: center; -fx-text-fill :#f01212;"
+                       text="Invalid Input" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+
+                <GridPane gridLinesVisible="false" layoutX="171.0" layoutY="187.0" prefHeight="372.0" prefWidth="592.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="45"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="20"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="45.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="45"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="20"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="45.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="LECTURE 1" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="LECTURE 2" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="LECTURE 3" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="LECTURE 4" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="LECTURE 5" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="LECTURE 6" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="LECTURE 7" GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="TO" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="TO" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="TO" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="TO" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="TO" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="TO" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="TO" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Spinner fx:id="spinner11" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                        <Spinner fx:id="spinner12" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                        <Spinner fx:id="spinner21" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Spinner fx:id="spinner22" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                        <Spinner fx:id="spinner31" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Spinner fx:id="spinner32" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                        <Spinner fx:id="spinner41" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Spinner fx:id="spinner42" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                        <Spinner fx:id="spinner51" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <Spinner fx:id="spinner52" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+                        <Spinner fx:id="spinner61" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <Spinner fx:id="spinner62" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+                        <Spinner fx:id="spinner71" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                        <Spinner fx:id="spinner72" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="3" GridPane.rowIndex="6"/>
+
+                        <Spinner fx:id="spinner14" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="7" GridPane.rowIndex="0"/>
+                        <Spinner fx:id="spinner13" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="5" GridPane.rowIndex="0"/>
+                        <Spinner fx:id="spinner24" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="7" GridPane.rowIndex="1"/>
+                        <Spinner fx:id="spinner23" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+                        <Spinner fx:id="spinner34" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="7" GridPane.rowIndex="2"/>
+                        <Spinner fx:id="spinner33" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="5" GridPane.rowIndex="2"/>
+                        <Spinner fx:id="spinner44" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="7" GridPane.rowIndex="3"/>
+                        <Spinner fx:id="spinner43" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="5" GridPane.rowIndex="3"/>
+                        <Spinner fx:id="spinner54" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="7" GridPane.rowIndex="4"/>
+                        <Spinner fx:id="spinner53" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="5" GridPane.rowIndex="4"/>
+                        <Spinner fx:id="spinner64" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="7" GridPane.rowIndex="5"/>
+                        <Spinner fx:id="spinner63" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="5" GridPane.rowIndex="5"/>
+                        <Spinner fx:id="spinner74" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="7" GridPane.rowIndex="6"/>
+                        <Spinner fx:id="spinner73" prefHeight="38.0" prefWidth="70.0" style="-fx-border-color:black"
+                                 GridPane.columnIndex="5" GridPane.rowIndex="6"/>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="6" GridPane.rowIndex="0">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text=":" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="25.0"/>
+                            </font>
+                        </Label>
+
+
+                    </children>
+                </GridPane>
+
+
+            </children>
+        </AnchorPane>
+
+
+    </center>
+
+
+    <left>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </left>
+
+
+    <right>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </right>
+
+</BorderPane>

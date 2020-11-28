@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="577.0" prefWidth="820.0" style="-fx-background-color: BLACK;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AddClassController">
+    <center>
+        <GridPane alignment="center" hgap="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: ORANGE;"
+                  vgap="30.0">
+
+            <Text fx:id="addClass" style="-fx-text-alignment: center;" text="ADD CLASS" translateX="-60.0"
+                  translateY="-80" wrappingWidth="255.0" GridPane.columnIndex="2" GridPane.columnSpan="2"
+                  GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                <font>
+                    <Font name="System Bold" size="30.0"/>
+                </font>
+            </Text>
+
+
+            <Label text="BATCH NAME (e.g BESE-10A):" translateX="-60.0" translateY="-60" GridPane.columnIndex="2"
+                   GridPane.rowIndex="3">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="noOfSubjectsTextField" prefHeight="27.0" prefWidth="153.0" style="-fx-border-color:black"
+                       translateX="-80.0" translateY="-60" GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+            <TextField fx:id="classNameTextField" prefHeight="27.0" prefWidth="153.0" style="-fx-border-color:black"
+                       translateX="-80.0" translateY="-60" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+
+
+            <Label text="NUMBER OF STUDENTS:" translateX="-60.0" translateY="-60" GridPane.columnIndex="2"
+                   GridPane.rowIndex="4">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Label>
+
+
+            <Label text="NUMBER OF SUBJECTS:" translateX="-60.0" translateY="-60" GridPane.columnIndex="2"
+                   GridPane.rowIndex="5">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="noOfStudentsTextField" prefHeight="27.0" prefWidth="153.0" style="-fx-border-color:black"
+                       translateX="-80.0" translateY="-60" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+            <Label fx:id="stateLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="268.0"
+                   style="-fx-text-alignment: center; -fx-text-fill :#f01212;" text="Invalid Input"
+                   textAlignment="CENTER" translateX="-60.0" translateY="-60" GridPane.columnIndex="2"
+                   GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                <font>
+                    <Font name="System Bold" size="14.0"/>
+                </font>
+            </Label>
+
+            <Button fx:id="addClassButton" alignment="CENTER" onAction="#done" prefHeight="39.0" prefWidth="150.0"
+                    style="-fx-background-color: BLACK; -fx-text-fill: white; -fx-alignment: CENTER;" text="ADD CLASS"
+                    translateX="-60.0" translateY="-60" GridPane.columnIndex="2" GridPane.columnSpan="2"
+                    GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+
+
+            <Button fx:id="backButton" alignment="CENTER" onAction="#back" prefHeight="44.0" prefWidth="99.0"
+                    style="-fx-background-color: BLACK; -fx-text-fill: white;" text="BACK" translateX="-215.0"
+                    translateY="-175.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+
+        </GridPane>
+    </center>
+
+
+    <left>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </left>
+
+
+    <right>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </right>
+
+</BorderPane>

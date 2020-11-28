@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: black;"
+           xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="LoginScreenController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0"
+                    style="-fx-background-color: black;">
+            <children>
+                <ImageView fitHeight="1800.0" fitWidth="600.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="413.0"
+                    style="-fx-background-color: orange;">
+            <children>
+                <Label contentDisplay="TOP" layoutX="599.0" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="127.0" text="USER LOGIN">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="usernameTextField" focusTraversable="false" layoutX="534.0" layoutY="436.0"
+                           prefHeight="42.0" prefWidth="254.0" promptText="User Name"
+                           style="-fx-border-color: black; -fx-border-width: 2;">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordTextField" focusTraversable="false" layoutX="534.0" layoutY="499.0"
+                               prefHeight="42.0" prefWidth="254.0" promptText="Password"
+                               style="-fx-border-color: black; -fx-border-width: 2;">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </PasswordField>
+
+                <Button layoutX="534.0" layoutY="608.0" mnemonicParsing="false" onAction="#login" prefHeight="43.0"
+                        prefWidth="254.0"
+                        style="-fx-background-color: Black; -fx-border-color: BLACK; -fx-border-width: 2; -fx-text-fill: white;"
+                        text="Login">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+
+                <Button layoutX="663.0" layoutY="694.0" mnemonicParsing="false" onAction="#signUp"
+                        style="-fx-background-color: black; -fx-border-color: black; -fx-border-width: 2; -fx-text-fill: white;"
+                        text="Sign Up">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Hyperlink alignment="CENTER_RIGHT" layoutX="618.0" layoutY="548.0" onAction="#forgotPassword"
+                           prefHeight="30.0" prefWidth="170.0" style="-fx-text-fill: black;" text="Forgot Password?"
+                           textAlignment="RIGHT">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Hyperlink>
+                <Label layoutX="544.0" layoutY="692.0" prefHeight="43.0" prefWidth="111.0" style="-fx-text-fill: black;"
+                       text="NEW USER?">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="41.0" fitWidth="37.0" layoutX="491.0" layoutY="436.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@username.jpg"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="491.0" layoutY="499.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@password.png"/>
+                    </image>
+                </ImageView>
+                <CheckBox fx:id="rememberMeCheckBox" layoutX="544.0" layoutY="579.0" mnemonicParsing="false"
+                          style="-fx-background-color: orange; -fx-border-color: orange; -fx-text-fill: black;"
+                          text="Remember Me">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </CheckBox>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="580.0" layoutY="176.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@userimage.png"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="usernameError" layoutX="808.0" layoutY="448.0" text="Incorrect User Name"
+                       textFill="#f01212">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="passwordError" layoutX="808.0" layoutY="512.0" text="Incorrect Password"
+                       textFill="#f01212">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Label>
+
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
