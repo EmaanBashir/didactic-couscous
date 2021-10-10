@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Project2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Project2_jar</output-path>
+    <root id="archive" name="Project2.jar">
+      <element id="module-output" name="Project2" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/controlsfx-8.40.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/sqlite-jdbc-3.30.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/javax.mail.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

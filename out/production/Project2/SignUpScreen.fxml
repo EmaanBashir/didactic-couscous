@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpScreenController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0"
+                    style="-fx-background-color: black;">
+            <children>
+                <ImageView fitHeight="1800.0" fitWidth="600.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0"
+                    style="-fx-background-color: ORANGE;">
+            <children>
+                <Label layoutX="331.0" layoutY="156.0" text="CREATE ACCOUNT">
+                    <font>
+                        <Font name="System Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="firstNameTextField" focusTraversable="false" layoutX="331.0" layoutY="220.0"
+                           prefHeight="35.0" prefWidth="220.0" promptText="FIRST NAME" style="-fx-border-color: black;">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="lastNameTextField" focusTraversable="false" layoutX="331.0" layoutY="277.0"
+                           prefHeight="35.0" prefWidth="220.0" promptText="LAST NAME" style="-fx-border-color: black;">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </TextField>
+                <RadioButton fx:id="schoolRadioButton" layoutX="331.0" layoutY="418.0" mnemonicParsing="false"
+                             onAction="#schoolSelected" text="SCHOOL">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </RadioButton>
+                <RadioButton fx:id="collegeRadioButton" layoutX="419.0" layoutY="418.0" mnemonicParsing="false"
+                             onAction="#collegeSelected" text="COLLEGE">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </RadioButton>
+                <RadioButton fx:id="universityRadioButton" layoutX="509.0" layoutY="418.0" mnemonicParsing="false"
+                             onAction="#universitySelected" text="UNIVERSITY">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </RadioButton>
+                <TextField fx:id="instituteNameTextField" focusTraversable="false" layoutX="331.0" layoutY="460.0"
+                           prefHeight="35.0" prefWidth="337.0" promptText="UNIVERSITY/SCHOOL NAME"
+                           style="-fx-border-color: black;">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="emailTextField" focusTraversable="false" layoutX="331.0" layoutY="513.0"
+                           prefHeight="35.0" prefWidth="337.0" promptText="EMAIL ADDRESS"
+                           style="-fx-border-color: black;">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordTextField" focusTraversable="false" layoutX="331.0" layoutY="567.0"
+                               prefHeight="35.0" prefWidth="220.0" promptText="PASSWORD"
+                               style="-fx-border-color: black;">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </PasswordField>
+                <PasswordField fx:id="confirmPasswordTextField" focusTraversable="false" layoutX="331.0" layoutY="624.0"
+                               prefHeight="35.0" prefWidth="220.0" promptText="CONFIRM PASSWORD"
+                               style="-fx-border-color: black;">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </PasswordField>
+                <TextField fx:id="usernameTextField" focusTraversable="false" layoutX="331.0" layoutY="334.0"
+                           prefHeight="35.0" prefWidth="220.0" promptText="USER NAME" style="-fx-border-color: black;">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </TextField>
+                <Label layoutX="331.0" layoutY="381.0" prefHeight="30.0" prefWidth="98.0" text="INSTITUTE">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Label>
+                <Button layoutX="545.0" layoutY="701.0" mnemonicParsing="false" onAction="#create" prefHeight="38.0"
+                        prefWidth="228.0" style="-fx-background-color: BLACK; -fx-text-fill: WHITE;" text="CREATE">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button layoutX="545.0" layoutY="765.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0"
+                        prefWidth="228.0" style="-fx-background-color: BLACK; -fx-text-fill: WHITE;"
+                        text="BACK TO LOGIN ">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <ImageView fitHeight="108.0" fitWidth="214.0" layoutX="825.0" layoutY="160.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@timetable generator.jpg"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="458.0" layoutY="666.0"
+                       prefHeight="20.0" prefWidth="401.0" text="Incorrect Password" textAlignment="CENTER"
+                       textFill="#f01212">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

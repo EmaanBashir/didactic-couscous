@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="577.0" prefWidth="820.0" style="-fx-background-color: BLACK;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="SelectClassSubjectsController">
+    <center>
+
+        <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="800" prefWidth="1000" style="-fx-background-color: ORANGE;">
+            <Label fx:id="classNameLabel" layoutX="428.0" layoutY="81.0" style="-fx-text-alignment: center;"
+                   text="BSCS-9A">
+                <font>
+                    <Font name="System Bold" size="35.0"/>
+                </font>
+            </Label>
+
+            <Button fx:id="backButton" alignment="CENTER" layoutX="180.0" layoutY="297.0" onAction="#back"
+                    prefHeight="38.0" prefWidth="75.0" style="-fx-background-color: BLACK; -fx-text-fill: white;"
+                    text="BACK" translateX="-150.0" translateY="-270.0">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+
+            <Label fx:id="stateLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="635.0"
+                   prefHeight="26.0" prefWidth="420.0" style="-fx-text-alignment: center; -fx-text-fill :#f01212;"
+                   text="Invalid Input" textAlignment="CENTER" translateX="-60.0">
+                <font>
+                    <Font name="System Bold" size="16.0"/>
+                </font>
+            </Label>
+
+            <Button fx:id="addSubjectsButton" alignment="CENTER" layoutX="463.0" layoutY="682.0" onAction="#addSubjects"
+                    prefHeight="38.0" prefWidth="75.0" style="-fx-background-color: BLACK; -fx-text-fill: white;"
+                    text="DONE">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+        </AnchorPane>
+    </center>
+
+    <left>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </left>
+
+    <right>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+
+        </GridPane>
+    </right>
+</BorderPane>

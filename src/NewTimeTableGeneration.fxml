@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="577.0" prefWidth="820.0" style="-fx-background-color: BLACK;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="NewTimeTableGenerationController">
+    <center>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="800" prefWidth="1000" style="-fx-background-color: ORANGE;">
+            <children>
+                <Button alignment="CENTER" layoutX="180.0" layoutY="297.0" onAction="#back" prefHeight="38.0"
+                        prefWidth="75.0" style="-fx-background-color: BLACK; -fx-text-fill: white;" text="BACK"
+                        translateX="-150.0" translateY="-270.0">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Label layoutX="290.0" layoutY="100.0" text="SELECT A CLASS OR AN INSTRUCTOR">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+
+                <ComboBox fx:id="classesComboBox" layoutX="239.0" layoutY="170.0" onAction="#selectClass"
+                          prefHeight="35.0" prefWidth="200.0" promptText="SELECT CLASS"
+                          style="-fx-background-color: WHITE; -fx-border-color: BLACK;">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </ComboBox>
+                <ComboBox fx:id="teachersComboBox" layoutX="593.0" layoutY="170.0" onAction="#selectTeacher"
+                          prefHeight="35.0" prefWidth="200.0" promptText="SELECT INSTRUCTOR"
+                          style="-fx-border-color: BLACK; -fx-background-color: WHITE;">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </ComboBox>
+                <GridPane gridLinesVisible="true" layoutX="119.0" layoutY="250.0" prefHeight="450.0" prefWidth="763.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="label50" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="-" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label60" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label65" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="5"
+                               GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label70" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label75" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="5"
+                               GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label40" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label10" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+                        <Label fx:id="label30" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label20" alignment="CENTER" contentDisplay="CENTER"
+                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-"
+                               textAlignment="CENTER" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label21" alignment="CENTER" contentDisplay="CENTER"
+                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-"
+                               textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label11" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label22" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="2"
+                               GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label12" alignment="CENTER" contentDisplay="CENTER"
+                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-"
+                               textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label23" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3"
+                               GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label13" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3"
+                               GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label24" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="4"
+                               GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label14" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="4"
+                               GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label35" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="5"
+                               GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label25" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="5"
+                               GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label15" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="5"
+                               GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label31" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="1"
+                               GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label32" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="2"
+                               GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label33" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3"
+                               GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label34" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="4"
+                               GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="Monday" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="Tuesday" GridPane.columnIndex="2">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="Wednesday" GridPane.columnIndex="3">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="Thursday" GridPane.columnIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="Friday" GridPane.columnIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label41" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="1"
+                               GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label42" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="2"
+                               GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label43" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3"
+                               GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label44" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="4"
+                               GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label45" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="5"
+                               GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="-" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="-" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="-" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                               text="-" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label61" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="1"
+                               GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label62" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="2"
+                               GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label73" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3"
+                               GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label71" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="1"
+                               GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label72" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="2"
+                               GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label63" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3"
+                               GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label64" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="4"
+                               GridPane.rowIndex="6">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label74" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="4"
+                               GridPane.rowIndex="7">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label80" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.rowIndex="8">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label81" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="1"
+                               GridPane.rowIndex="8">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label82" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="2"
+                               GridPane.rowIndex="8">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label83" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3"
+                               GridPane.rowIndex="8">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label84" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="4"
+                               GridPane.rowIndex="8">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="label85" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                               maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="5"
+                               GridPane.rowIndex="8">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </GridPane>
+                <Button layoutX="180.0" layoutY="730.0" mnemonicParsing="false" onAction="#regenerateTimeTable"
+                        style="-fx-background-color: BLACK; -fx-text-fill: WHITE;" text="REGENERATE TIMETABLE">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button layoutX="584.0" layoutY="730.0" mnemonicParsing="false" onAction="#saveTimeTable"
+                        prefWidth="250.0" style="-fx-background-color: BLACK; -fx-text-fill: WHITE;"
+                        text="SAVE TIMETABLE">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+
+
+    <left>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </left>
+
+
+    <right>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </right>
+
+</BorderPane>

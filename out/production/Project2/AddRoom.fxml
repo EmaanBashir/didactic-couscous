@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="577.0" prefWidth="820.0" style="-fx-background-color: BLACK;"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="AddRoomController">
+    <center>
+        <GridPane alignment="center" hgap="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: ORANGE;"
+                  vgap="30.0">
+
+            <Text style="-fx-text-alignment: center;" text="ADD ROOM" translateX="-60.0" wrappingWidth="255.0"
+                  GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                <font>
+                    <Font name="System Bold" size="30.0"/>
+                </font>
+            </Text>
+
+
+            <Label prefHeight="30.0" prefWidth="250.0" text="CAPACITY:" translateX="-60.0" GridPane.columnIndex="2"
+                   GridPane.rowIndex="5">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Label>
+
+            <Label prefHeight="35.0" prefWidth="144.0" text="ROOM NO:" translateX="-60.0" GridPane.ColumnSpan="1"
+                   GridPane.columnIndex="2" GridPane.rowIndex="4">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Label>
+
+            <Label fx:id="roomNumberLabel" prefHeight="35.0" prefWidth="144.0" text="1" translateX="-60.0"
+                   GridPane.ColumnSpan="1" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Label>
+
+            <TextField fx:id="roomCapacityTextField" prefHeight="27.0" prefWidth="153.0"
+                       style="-fx-background-color: WHITE; -fx-border-color: black;" translateX="-80.0"
+                       GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+
+
+            <Button fx:id="AddRoomButton" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity"
+                    onAction="#addRoom" prefHeight="50.0" prefWidth="200.0"
+                    style="-fx-background-color: BLACK; -fx-text-fill: white; -fx-alignment: CENTER;" text="ADD ROOM"
+                    translateX="-60.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+                    GridPane.rowIndex="8">
+                <font>
+                    <Font name="System Bold" size="20.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+
+
+            <Button fx:id="backButton" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#back"
+                    prefHeight="44.0" prefWidth="99.0" style="-fx-background-color: BLACK; -fx-text-fill: white;"
+                    text="BACK" translateX="-220.0" translateY="-115.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+
+
+            <Label fx:id="stateLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="270.0"
+                   style="-fx-text-alignment: center; -fx-text-fill :#f01212;" text="Invalid Input"
+                   textAlignment="CENTER" translateX="-60.0" GridPane.columnIndex="2" GridPane.columnSpan="2"
+                   GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                <font>
+                    <Font name="System Bold" size="16.0"/>
+                </font>
+            </Label>
+            <columnConstraints>
+                <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0"/>
+                <ColumnConstraints maxWidth="75.0" minWidth="60.0" prefWidth="72.0"/>
+                <ColumnConstraints maxWidth="230.0" minWidth="215.0" prefWidth="218.0"/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </center>
+
+
+    <left>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_LEFT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </left>
+
+
+    <right>
+        <GridPane alignment="CENTER" style="-fx-background-color: black;">
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" BorderPane.alignment="CENTER_RIGHT" GridPane.columnIndex="0"
+                       GridPane.rowIndex="1">
+                <image>
+                    <Image url="@Boxes.png"/>
+                </image>
+            </ImageView>
+            <columnConstraints>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </right>
+
+</BorderPane>
